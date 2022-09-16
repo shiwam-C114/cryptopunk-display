@@ -33,7 +33,7 @@ export default function Nav() {
         <>
             <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-                    
+
                     <Heading size={"lg"}>CryptoPunk Display</Heading>
 
                     <Flex alignItems={'center'}>
@@ -51,32 +51,32 @@ export default function Nav() {
                                     <Avatar
                                         size={'sm'}
                                         src={ensAvatar ?
-                                            {ensAvatar} :
+                                            { ensAvatar } :
                                             'https://avatars.dicebear.com/api/male/username.svg'}
                                     />
                                 </MenuButton>
                                 {
-                                    isConnected?
-                                    <MenuList  alignItems={'center'}>
-                                        <br />
-                                        <Center>
-                                            <Avatar
-                                                size={'2xl'}
-                                                src={'https://avatars.dicebear.com/api/male/username.svg'}
-                                            />
-                                        </Center>
-                                        <br />
-                                        <Center>
-                                            <Text>{ensName ? `${ensName} (${address})` : address}</Text>
-                                        </Center>
-                                        <Text>Connected to {connector?.name}</Text>
-                                        <br />
-                                        <MenuDivider />
+                                    isConnected ?
+                                        <MenuList alignItems={'center'}>
+                                            <br />
+                                            <Center>
+                                                <Avatar
+                                                    size={'2xl'}
+                                                    src={'https://avatars.dicebear.com/api/male/username.svg'}
+                                                />
+                                            </Center>
+                                            <br />
+                                            <Center>
+                                                <Text>Account: {ensName ? `${ensName} (${address})` : address}</Text>
+                                            </Center>
+                                            <Text>Connected to: {connector?.name}</Text>
+                                            <br />
+                                            <MenuDivider />
                                             <MenuItem onClick={() => {
                                                 disconnect()
                                                 push("/signin")
-                                             } }>Disconnect</MenuItem>
-                                    </MenuList>:null
+                                            }}>Disconnect</MenuItem>
+                                        </MenuList> : null
                                 }
                             </Menu>
                         </Stack>

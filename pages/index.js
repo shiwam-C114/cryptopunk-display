@@ -2,18 +2,19 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { useAccount } from 'wagmi'
+
 export default function Home() {
   const { isConnected } = useAccount()
   const { push } = useRouter();
   useEffect(() => {
     if (!isConnected) {
-    push("/signin")
+      push("/signin")
     } else {
       push("/display")
-  }
+    }
 
   }, [])
-  
+
   return (
     <div >
       <Head>
@@ -23,12 +24,11 @@ export default function Home() {
       </Head>
 
       <main>
-  
-
+        loading...
       </main>
 
       <footer>
-       
+        made by shiwam with love.
       </footer>
     </div>
   )

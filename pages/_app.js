@@ -6,7 +6,7 @@ import { publicProvider } from 'wagmi/providers/public';
 
 function MyApp({ Component, pageProps }) {
 
-  const {chains, provider, webSocketProvider } = configureChains(defaultChains, [publicProvider()]);
+  const { chains, provider, webSocketProvider } = configureChains(defaultChains, [publicProvider()]);
 
   const client = createClient({
     provider,

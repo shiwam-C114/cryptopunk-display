@@ -28,7 +28,7 @@ export default function CryproPunckCard({ image, type, accessories }) {
                     rounded={'lg'}
                     mt={-12}
                     pos={'relative'}
-                  
+
                     _after={{
                         transition: 'all .3s ease',
                         content: '""',
@@ -49,7 +49,7 @@ export default function CryproPunckCard({ image, type, accessories }) {
                     <Image
                         alt='cryptopunks'
                         rounded={'lg'}
-                       
+
                         width={282}
                         objectFit={'cover'}
                         src={image}
@@ -57,25 +57,25 @@ export default function CryproPunckCard({ image, type, accessories }) {
                 </Box>
                 <Stack pt={10} align={'center'}>
                     <Text color={'gray.500'} fontSize={'md'} textTransform={'uppercase'}>
-                       {type}
+                        {type}
                     </Text>
                     <VStack direction={'row'} align={'center'}>
                         {/* <Text>
                         Accessories:
                        </Text> */}
-                       <Flex direction={"column"}>
-                        {
-                            accessories.map((ele, i) => (
-                                <>
-                                <Text key={i} fontWeight={400} fontSize={'xl'}>
-                                    {ele}
-                                </Text>     
-                                </>
-                            )
-                            )
-                            
-                            
-                        }
+                        <Flex direction={"column"}>
+                            {
+                                accessories.map((ele, i) => (
+                                    <>
+                                        <Text key={i} fontWeight={400} fontSize={'xl'}>
+                                            {ele}
+                                        </Text>
+                                    </>
+                                )
+                                )
+
+
+                            }
                         </Flex>
                     </VStack>
                 </Stack>

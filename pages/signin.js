@@ -1,4 +1,4 @@
-import {useAccount, useConnect} from 'wagmi'
+import { useAccount, useConnect } from 'wagmi'
 import {
     Button,
     Flex,
@@ -15,11 +15,11 @@ function SignIn() {
     const { push } = useRouter();
     const { isConnected } = useAccount();
     useEffect(() => {
-      if (isConnected) {
-        push("/display")
-      }
+        if (isConnected) {
+            push("/display")
+        }
     }, [isConnected])
-    
+
     return (
         <div>
             <Nav />
@@ -60,7 +60,7 @@ function SignIn() {
 
                             </Button>
                         ))}
-                      
+
                     </Stack>
                 </Stack>
             </Flex>
