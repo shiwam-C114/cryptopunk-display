@@ -1,6 +1,6 @@
 # CryptoPunks Nft Display app
 
-A app that displays all the 10000 CryptoPunks with their images, gender(type) and accessories. Requires wwallet for authentication. 
+A app that displays all the 10000 CryptoPunks with their images, gender(type) and accessories. Requires wallet for authentication. 
 
 ## Deployment Link
 ```url
