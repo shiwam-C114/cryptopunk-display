@@ -20,7 +20,7 @@ function Display() {
             push("/")
         }
         getCryptopunk()
-    }, [])
+    }, [isConnected])
 
 
     //  function to get meta-data of cryptopunks .
