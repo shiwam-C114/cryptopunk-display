@@ -6,13 +6,14 @@ import { useAccount } from 'wagmi'
 export default function Home() {
   const { isConnected } = useAccount()
   const { push } = useRouter();
+
   useEffect(() => {
+    // navigating to signin if not connected wallet else to displaying the CryptoPunks
     if (!isConnected) {
       push("/signin")
     } else {
       push("/display")
     }
-
   }, [])
 
   return (

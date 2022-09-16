@@ -22,6 +22,8 @@ import { useRouter } from 'next/router';
 
 
 export default function Nav() {
+
+    // navbar with users ens name and avatad options
     const { address, connector, isConnected } = useAccount()
     const { data: ensAvatar } = useEnsAvatar({ addressOrName: address })
     const { data: ensName } = useEnsName({ address })

@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps }) {
 
   const { chains, provider, webSocketProvider } = configureChains(defaultChains, [publicProvider()]);
 
+  //  creating client with 2 wallet options of connectors metamask and coinbase
   const client = createClient({
     provider,
     webSocketProvider,
@@ -22,6 +23,7 @@ function MyApp({ Component, pageProps }) {
       })]
   });
 
+  // wraping the entire app with wagmiConfig and chakraProvider for connecting to wallets, and css
   return (
     <ChakraProvider>
       <WagmiConfig client={client}>

@@ -11,9 +11,13 @@ import { useEffect } from 'react';
 import Nav from '../components/Nav';
 
 function SignIn() {
+    // connect funtion for connecting to the wallet, connectors is the array(list) of wallets
+    // error, isLoading, pendingConnector for UI (showing connecting in the button)
     const { connect, connectors, error, isLoading, pendingConnector } = useConnect()
     const { push } = useRouter();
     const { isConnected } = useAccount();
+
+    // if wallet connected sucessfully navidate to display
     useEffect(() => {
         if (isConnected) {
             push("/display")

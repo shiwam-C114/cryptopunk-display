@@ -11,19 +11,24 @@ function Display() {
     const [limit, setLimit] = useState(21)
     const { isConnected } = useAccount();
     const { push } = useRouter();
+
+
     useEffect(() => {
+
+        // if not connected wallet navigate to index 
         if (!isConnected) {
             push("/")
         }
         getCryptopunk()
     }, [])
 
-    async function getCryptopunk() {
-        axios.get('https://cryptopunks.herokuapp.com/api/punks/').then(res => {
-            console.log(res);
-            setData(res.data)
-        })
 
+    //  function to get meta-data of cryptopunks .
+    //  getting the data from a free hosted server which only have image, gender(type), accessories
+    async function getCryptopunk() {
+        let response = await axios.get('https://cryptopunks.herokuapp.com/api/punks/')
+        response = response.data
+        setData(response)
     }
 
 
@@ -34,8 +39,9 @@ function Display() {
                 {
                     data?.map((ele, i) => {
                         return <>{
-                            i < limit ?
-                                <GridItem>
+                            // limiting the number of cards in a page
+                            (i < limit) ?
+                                <GridItem >
                                     <CryproPunckCard key={i} image={ele?.image} accessories={ele?.accessories} type={ele?.type} />
                                 </GridItem> : null
                         }
@@ -46,7 +52,7 @@ function Display() {
             <Center>
 
                 <Button
-
+                    // updateing card in a page in multiples of 21
                     onClick={() => { setLimit(prev => prev + 21) }}
                     bg={'blue.400'}
                     color={'white'}

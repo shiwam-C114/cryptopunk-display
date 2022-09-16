@@ -12,6 +12,7 @@ import {
 
 
 export default function CryproPunckCard({ image, type, accessories }) {
+    // card to display individual cryptopunk 
     return (
         <Center py={12}>
             <Box
