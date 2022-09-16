@@ -1,11 +1,23 @@
 # CryptoPunks Nft Display app
 
-A app that displays all the 10000 CryptoPunks with their images, gender(type) and accessories. 
+A app that displays all the 10000 CryptoPunks with their images, gender(type) and accessories. Requires wwallet for authentication. 
 
 ## Deployment Link
 ```url
    https://cryptopunk-display.vercel.app/display
 ```
+## For referece see Images folder in main
+```url
+https://github.com/shiwam-C114/cryptopunk-display/tree/main/Images
+```
+## some images
+
+<img src="https://raw.githubusercontent.com/shiwam-C114/cryptopunk-display/main/Images/CryptoPunksDisplayLoginPage-lite.jpg"/>
+
+<img src="https://raw.githubusercontent.com/shiwam-C114/cryptopunk-display/main/Images/AuthenticateUsingMetaMask.jpg"/>
+
+<img src="https://raw.githubusercontent.com/shiwam-C114/cryptopunk-display/main/Images/CryptoPunksDisplay-dark.jpg"/>
+
 
 ## Tech Stack
 - Next.js
