@@ -10,7 +10,8 @@ A app that displays all the 10000 CryptoPunks with their images, gender(type) an
 ## Tech Stack
 - Next.js
 - Chakra UI
-- 
+- Wagmi
+- Ethers
 
 ## Features
 - connect wallet to Aunthentication.
